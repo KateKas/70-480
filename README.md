@@ -9,7 +9,7 @@
     <div id="Header">
         <h1>Estudo do livro Exam Ref 70-480 Programming in HTML5 with JavaScript and CSS3</h1>
         <nav>
-            <li><a href="Geolocation API.html">GeolocationAPI</a></li>
+            <li><a href="Geolocation API.html">Geolocation API</a></li>
             <li><a href="WebStorageAPI.html">Storage API</a></li>
         </nav>
     </div>
