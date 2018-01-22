@@ -2,31 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script>
-        window.onload = function(){
-            var geoLocator = window.navigator.geolocation;
-            var posOptions = {enableHighAccuracy:true, timeout:45000};
-            geoLocator.getCurrentPosition(successPosition, errorPosition, posOptions);
-        }
-
-        function successPosition(pos){
-            var sp = document.createElement("p");
-            sp.innerText = "Latitude: " + pos.coords.latitude + " Longitude: " + pos.coords.longitude;
-            document.getElementById("geoResults").appendChild(sp);
-        }
-        function errorPosition(err){
-            var sp = document.createElement("p");
-            sp.innerText = "error: " + err.message + " code: " + err.code;
-            document.getElementById("geoResults").appendChild(sp);
-        }
-    </script>
+    <title>Estudo do livro Exam Ref 70-480
+        Programming in HTML5
+        with JavaScript and CSS3</title>
 </head>
 <body>
-    <div id="geoResults">
-        <p>Current location is:</p>
+    <div id="Header">
+        <h1>Estudo do livro Exam Ref 70-480 Programming in HTML5 with JavaScript and CSS3</h1>
+        <nav>
+            <li><a href="Geolocation API.html">GeolocationAPI</a></li>
+            <li><a href="WebStorageAPI.html">Storage API</a></li>
+        </nav>
     </div>
+    <div id="LeftSide"></div>
+    <div id="RightSide"></div>
+    <div id="Footer"></div>
 </body>
 </html>
