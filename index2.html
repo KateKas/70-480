@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function(){
+            var outerDiv = document.getElementById("outerDiv");
+            var innerDiv = document.getElementById("innerDiv");
+            var newDiv = document.createElement("div");
+            for(var i = 0; i < innerDiv.childNodes.length; i++)
+            {
+                var anchor = newDiv.appendChild(document.createElement("a"));
+                anchor.setAttribute("href", "http://www.softkas.com.br");
+                anchor.innerText = innerDiv.childNodes[i].textContent;
+                newDiv.appendChild(document.createElement("br"));
+            }     
+            outerDiv.replaceChild(newDiv, innerDiv);
+
+
+            var drawCanvas = document.getElementById("drawCanvas");
+            var ctxt = drawCanvas.getContext("2d");
+            ctxt.beginPath();
+            ctxt.moveTo(10,380);
+            ctxt.quadraticCurveTo(300,-250,580,380);
+            ctxt.lineWidth = 25;           
+            ctxt.strokeStyle = 'blue';
+            ctxt.stroke();
+        }
+
+
+    </script>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <canvas id="drawCanvas" width="600" height="400">
+           Your browser does not support HTML 5.
+       </canvas>
+   </div>
+    <div id="outerDiv">
+        <p class='mainPara'>Main Paragraph</p>
+        <ul>
+            <li>First List Item</li>
+            <li>Second List Item</li>
+            <li>Third List Item</li>
+            <li>Fourth List Item</li>
+        </ul>
+        <div id="innerDiv">
+            <p class='subPara' id='P1'>Paragraph 1</p>
+            <p class='subPara' id='P2'>Paragraph 2</p>
+            <p class='subPara' id='P3'>Paragraph 3</p>
+            <p class='subPara' id='P4'>Paragraph 4</p>
+        </div>
+        <table>
+            <tr>
+                <td>Row 1
+                </td>
+            </tr>
+            <tr>
+                <td>Row 2
+                </td>
+            </tr>
+            <tr>
+                <td>Row 3
+                </td>
+            </tr>
+            <tr>
+                <td>Row 4
+                </td>
+            </tr>
+            <tr>
+                <td>Row 5
+                </td>
+            </tr>
+        </table>
+        <input type="text" />
+        <input type="submit" value="Submit" />
+    </div>
+</body>
+
+</html>
